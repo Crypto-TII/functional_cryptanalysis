@@ -1,0 +1,6 @@
+cpp/differential
+cpp/functional
+*.o
+*.pyc
+.idea/
+*~
