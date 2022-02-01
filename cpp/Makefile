@@ -3,12 +3,9 @@ CXXFLAGS = -Xpreprocessor -fopenmp -std=c++11
 OPTFLAGS = -Ofast -march=native -mtune=native
 LDFLAGS  = -lomp
 
-TARGETS  = differential functional
-
-$(TARGETS):
-	$(CXX) $(CXXFLAGS) $(OPTFLAGS) $@.cpp $(LDFLAGS) -o $@
-
-all: $(TARGETS)
+all:
+	$(CXX) $(CXXFLAGS) $(OPTFLAGS) differential.cpp -o differential $(LDFLAGS)
+	$(CXX) $(CXXFLAGS) $(OPTFLAGS) functional.cpp -o functional $(LDFLAGS)
 
 clean:
-	rm -f $(TARGETS)
+	rm -f differential functional
