@@ -1,5 +1,5 @@
 CXX      = g++
-CXXFLAGS = -Xpreprocessor -std=c++11
+CXXFLAGS = -Xpreprocessor -fopenmp -std=c++11
 OPTFLAGS = -Ofast -march=native -mtune=native
 LDFLAGS  = -lomp
 
